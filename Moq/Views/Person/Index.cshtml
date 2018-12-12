@@ -1,0 +1,22 @@
+﻿@model MoqSample.Models.Person
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Person Details</h2>
+
+<form method="post">
+    <label asp-for="FirstName" class="col-md-2 control-label"></label>
+    <input asp-for="FirstName" class="form-control" /><br />
+    <span asp-validation-for="FirstName" class="text-danger"></span><br />
+    <br />
+    <label asp-for="LastName" class="col-md-2 control-label"></label>
+    <input asp-for="LastName" class="form-control" /><br />
+    <span asp-validation-for="LastName" class="text-danger"></span><br />
+    <br />
+    <label asp-for="Manager" class="col-md-2 control-label"></label>
+    <input asp-for="Manager" /><br />
+    <br />
+    <input type="submit" value="Submit" class="btn btn-purple btn-lg full-width" /><br />
+    <span class="text-success">@ViewBag.Message</span><br />
+</form>
